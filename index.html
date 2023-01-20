@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
@@ -51,12 +52,57 @@
                     </div>
                 </div>
                 <p class="legend">
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, inventore? 
+                   Pode chamar ele de roxinho. Além disso, pode chamar de moderno, gratuito e prático. 
                 </p>
-                <a href="https://nubank.com.br/" target="_blank" class="bankLink">Nubank
+                <a href="https://nubank.com.br/" target="_blank" class="bankLink">www.nubank.com.br</a>
             </div>
         </section>
-    </div>
+        <!--Card Btn-->
+        <div class="containerBtn">
+            <button class="btnOpenForm" id="btnOpenForm">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div> 
+            <form action="" id="formCard" class="formCard">
+                <div class="group">
+                    <label for="inputNumber">Card Number</label>
+                    <input type="text" id="inputNumber" maxlength="19" autocomplete="off">
+                </div>
+
+                <div class="group">
+                    <label for="inputName">Card Holder</label>
+                    <input type="text" id="inputName" maxlength="19" autocomplete="off">
+                </div>
+                <div class="flexbox">
+                    <div class="expirationGroup">
+                        <label for="'selectMounth">Expiration</label>
+                        <div class="flexbox">
+                            <div class="groupSelect">
+                                <select name="month" id="selectmonth">
+                                    <option disabled selected>Month</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="groupSelect">
+                                <select name="month" id="selectYear">
+                                    <option disabled selected>Year</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+
+                        <div class="cvvGroup">
+                            <label for="inputCVV">CVV</label>
+                            <input type="text" id="inputCVV" maxlength="3">
+                        </div>
+
+                     </div>
+                     <button type="submit" class="btnSubmit">Submit</button>
+                  </div>
+              </div>
+            </form>
+       </div>
+        <!--Card-->
+       
 
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
