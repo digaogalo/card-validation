@@ -6,7 +6,7 @@
 
 body {
     background-color: antiquewhite;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -149,7 +149,7 @@ body {
 
 .backCard .legend {
     font-size: 14px;
-    line-height: 24px;
+    color: #fff;
 }
 
 .backCard .bankLink {
@@ -170,7 +170,7 @@ body {
    top: -25px;
    z-index: 3;
    border-radius: 100%;
-   box-shadow: -5px, 4px 8px rgba(24, 56, 182, 0.4);
+   box-shadow: -5px 4px 8px rgba(24, 56, 182, 0.4);
    padding: 5px;
    transition: all .2s ease;
    border: none;
@@ -181,7 +181,7 @@ body {
     background: #1850b1;
 }
 
-.containerBtn .btnOpenForm:active {
+.containerBtn .btnOpenForm.active {
     transform: rotate(45deg);
 }
 
@@ -243,12 +243,37 @@ body {
     justify-content: space-between;
 }   
 
-.formCard .expirationGroup {
+.formCard .expiration {
 	width: 100%;
 }
 
-.formCard .cvvGroup {
-	min-width: 100px;
+.formCard .cvv {
+	min-width: 50px;
 }
 
 
+.formCard .groupSelect i {
+	position: absolute;
+	color: #CED6E0;
+	top: 18px;
+	right: 15px;
+	transition: .3s ease all;
+}
+
+.formCard .groupSelect:hover i {
+	color: #93bfed;
+}
+
+.formCard .btnSubmit {
+	border: none;
+	padding: 10px;
+	font-size: 22px;
+	color: #fff;
+	background: #2364d2;
+	box-shadow: 2px 2px 10px 0px rgba(0,85,212,0.4);
+	cursor: pointer;
+}
+
+.formCard .btnSubmit:hover {
+	background: #1850b1;
+}

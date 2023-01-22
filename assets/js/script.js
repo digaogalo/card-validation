@@ -4,7 +4,17 @@ const form = document.querySelector('#formCard')
 const cardNumber = document.querySelector('#card .number')
 const cardHolder = document.querySelector('#card .name')
 const logo = document.querySelector('#logo')
+const signature = document.querySelector('#card .signature p')
+const expirationMonth = document.querySelector('#card .month')
+const expirationYear = document.querySelector('#card .year')
+const cvv = document.querySelector('#card .cvv')
 
+
+const showFrontCard = () => {
+    if (card.classList.contains('active')) {
+        card.classList.remove('active')
+    }
+}
 
 card.addEventListener('click', () => {
     card.classList.toggle('active')
@@ -58,4 +68,43 @@ form.inputNumber.addEventListener('keyup', (e) => {
         img.src = 'img/logo/mastercard.png'
         logo.appendChild(img)
     }
+
+    showFrontCard()
+})
+
+form.inputName.addEventListener('keyup', (e) =>{
+    let inputValue = e.target.value
+
+    form.inputName.value = inputValue.replace(/[0-9]/g, '')
+    cardHolder.textContent = inputValue
+    signature.textContent = inputValue
+
+    if (inputValue == '') {
+        cardHolder.textContent = 'John Doe'
+    }
+
+    showFrontCard()
+})
+
+form.selectMonth.addEventListener('change', (e) =>{
+    expirationMonth.textContent = e.target.value
+    showFrontCard()
+})
+
+form.selectYear.addEventListener('change', (e) =>{
+    expirationYear.textContent = e.target.value.slice(2)
+    showFrontCard()
+})
+
+form.inputCVV.addEventListener('keyup', () =>{
+    if(!card.classList.contains('active')) {
+        card.classList.toggle('active')
+    }
+        form.inputCVV.value = form.inputCVV.value
+        //elina espaços
+        .replace(/\s/g, '')
+        //elimina letras
+        .replace(/\D/g, '')
+
+        cvv.textContent = form.inputCVV.value
 })
