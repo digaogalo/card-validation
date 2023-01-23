@@ -5,12 +5,11 @@
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: rgb(182, 182, 247);
     font-family: 'Lato', sans-serif;
 }
 
 .container {
-    
     width: 90%;
     max-width: 1000px;
     padding: 40px 20px;
@@ -204,7 +203,7 @@ body {
 
 .formCard label {
     display: block;
-    color: #7d8994;
+    color: #000e1b;
     margin-bottom: 5px;
     font-size: 16px;
 }
@@ -248,9 +247,18 @@ body {
 }
 
 .formCard .cvv {
-	min-width: 50px;
+	min-width: 100px;
 }
 
+.formCard .groupSelect {
+    width: 100%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.formCard select {
+    -webkit-appearance: none;
+}
 
 .formCard .groupSelect i {
 	position: absolute;
